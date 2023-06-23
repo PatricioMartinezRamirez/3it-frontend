@@ -1,0 +1,16 @@
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Email</th>
+            <th>Genero</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let resultado of resultados; let i = index" class="animate__animated animate__fadeIn">
+            <td> {{resultado.id}}</td>
+            <td>{{resultado.email}} </td>
+            <td>{{resultado.genero}} </td>
+        </tr>
+    </tbody>
+</table>

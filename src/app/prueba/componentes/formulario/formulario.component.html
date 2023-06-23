@@ -1,0 +1,15 @@
+<div>
+    <h3>Encuesta</h3>
+
+    <hr>
+    <form (ngSubmit)="enviar()">
+        <input class="form-control mb-4" type="text" placeholder="email" name="mail" [(ngModel)]="nuevo.email" />
+
+        <select class="form-control mb-4" id="type" [(ngModel)]="nuevo.genero" name="type">
+            <option *ngFor="let elt of listaGenero" [ngValue]="elt.nombre">
+                {{elt.nombre}}
+            </option>
+        </select>
+        <button class="btn btn-primary" type="submit" [disabled]="validacion()">Enviar</button>
+    </form>
+</div>
